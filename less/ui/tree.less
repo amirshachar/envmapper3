@@ -1,0 +1,88 @@
+.ui.tree{
+    //.grow();
+    //overflow-x: hidden;
+    //overflow-y: scroll;
+    padding: 5px;
+
+    li > ul{
+        padding-left: 20px;
+    }
+
+    li{
+        span.control{
+            background-image: url("icons.gif");
+            cursor: pointer;
+        }
+
+        span.collapser{
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 2px;
+
+            &.collapsed{
+                background-position: 0px -80px;
+                &:hover{
+                    background-position: -16px -80px;
+                }
+            }
+
+            &.expanded{
+                background-position: -32px -80px;
+                &:hover{
+                    background-position: -48px -80px;
+                }
+            }
+        }
+        
+        span.checkbox{
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            position: relative;
+            top: 2px;
+
+            &.all{
+                background-position: -32px -32px;
+                &:hover{
+                    background-position: -48px -32px;
+                }
+            }
+            &.none{
+                background-position: 0px -32px;
+                &:hover{
+                    background-position: -16px -32px;
+                }
+            }
+            &.some{
+                background-position: -64px -32px;
+                &:hover{
+                    background-position: -80px -32px;
+                }
+            }
+        }
+
+        div.line{
+            &:hover,&.node-highlight{
+                background-color: #333;
+                //background-color: #555;
+                //border-color: #333;
+            }
+            &.node-selected{
+                //background-color: rgba(136,248,10,0.75);
+                border-color: rgba(79,142,5,0.75);
+            }
+
+            span.node-title img{
+                padding-right: 5px;
+            }
+
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 3px 2px 2px 2px;
+            margin-top: 1px;
+            margin-bottom: 1px;
+            background-color: #222;
+        }
+    }
+}
